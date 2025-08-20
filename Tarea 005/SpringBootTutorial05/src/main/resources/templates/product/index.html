@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- Bootstrap CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+<!-- Custom CSS -->
+
+<link rel="stylesheet" th:href="@{/css/app.css}">
+
+
+<title th:text="${title}"></title>
+
+</head>
+
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+
+<div class="container my-4">
+
+<h2 class="text-center" th:text="${subtitle}"></h2>
+
+<div class="row">
+
+<div class="col-md-4 col-lg-3 mb-2" th:each="product : ${products}">
+
+<div class="card">
+
+<img src="https://placehold.co/600x400" class="card-img-top img-card">
+
+<div class="card-body text-center">
+
+<a th:href="@{/products/{id}(id=${product.id})}"
+
+class="btn bg-primary text-white"
+
+th:text="${product.name}">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+
+</html>
