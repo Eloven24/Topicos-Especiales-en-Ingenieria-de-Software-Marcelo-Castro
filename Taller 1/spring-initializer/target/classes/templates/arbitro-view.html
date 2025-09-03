@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalle Árbitro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h2>Detalle del Árbitro</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item"><strong>ID:</strong> <span th:text="${arbitro.id}"></span></li>
+                    <li class="list-group-item"><strong>Nombre:</strong> <span th:text="${arbitro.nombre}"></span></li>
+                    <li class="list-group-item"><strong>Cédula:</strong> <span th:text="${arbitro.cedula}"></span></li>
+                    <li class="list-group-item"><strong>Especialidad:</strong> <span th:text="${arbitro.especialidad}"></span></li>
+                    <li class="list-group-item"><strong>Escalafón:</strong> <span th:text="${arbitro.escalafon}"></span></li>
+                    <li class="list-group-item"><strong>Foto Perfil URL:</strong> <span th:text="${arbitro.fotoPerfilUrl}"></span></li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a th:href="@{/arbitros/{id}/editar(id=${arbitro.id})}" class="btn btn-warning">Editar</a>
+                    <form th:action="@{/arbitros/{id}/borrar(id=${arbitro.id})}" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Borrar Árbitro</button>
+                    </form>
+                    <a href="/arbitros/listar" class="btn btn-secondary">Volver a la lista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
