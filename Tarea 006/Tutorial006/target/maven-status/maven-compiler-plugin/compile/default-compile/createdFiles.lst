@@ -1,0 +1,14 @@
+com\eafit\nutrition\service\MedicionServiceSetter.class
+com\eafit\nutrition\model\Nota.class
+com\eafit\nutrition\model\Nutricionista.class
+com\eafit\nutrition\service\MedicionServiceConstructor.class
+com\eafit\nutrition\model\Paciente.class
+com\eafit\nutrition\NutritionApplication.class
+com\eafit\nutrition\model\Medicion.class
+com\eafit\nutrition\exception\GlobalExceptionHandler.class
+com\eafit\nutrition\repository\NutricionistaRepository.class
+com\eafit\nutrition\controller\MedicionController.class
+com\eafit\nutrition\repository\PacienteRepository.class
+com\eafit\nutrition\repository\MedicionRepository.class
+com\eafit\nutrition\service\MedicionServiceAutowired.class
+com\eafit\nutrition\controller\NutricionistaController.class
