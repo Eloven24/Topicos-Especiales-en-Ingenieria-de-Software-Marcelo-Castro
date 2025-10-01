@@ -1,0 +1,149 @@
+/* Personalización de la interfaz Swagger UI */
+/* Colores corporativos */
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #FF9800;
+    --success-color: #4CAF50;
+    --error-color: #F44336;
+    --warning-color: #FF9800;
+}
+
+/* Header personalizado */
+.topbar {
+    background-color: var(--primary-color) !important;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.topbar .download-url-wrapper .select-label {
+    color: white;
+}
+
+/* Título principal */
+.info .title {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Descripción de la API */
+.info .description {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Secciones de operaciones */
+.opblock.opblock-post {
+    border-color: var(--success-color);
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.opblock.opblock-get {
+    border-color: var(--primary-color);
+    background: rgba(33, 150, 243, 0.1);
+}
+
+.opblock.opblock-put {
+    border-color: var(--warning-color);
+    background: rgba(255, 152, 0, 0.1);
+}
+
+.opblock.opblock-delete {
+    border-color: var(--error-color);
+    background: rgba(244, 67, 54, 0.1);
+}
+
+/* Botones de operación */
+.opblock-summary-method {
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* Respuestas de ejemplo */
+.responses-inner h4 {
+    color: var(--primary-color);
+}
+
+/* Códigos de respuesta */
+.response-col_status {
+    font-weight: bold;
+}
+
+.response-col_status .response-undocumented {
+    color: var(--error-color);
+}
+
+/* Esquemas */
+.model-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.model-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Parámetros */
+.parameter__name {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.parameter__type {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+/* Try it out */
+.btn.try-out__btn {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn.execute {
+    background: var(--success-color);
+    border-color: var(--success-color);
+}
+
+/* Curl command */
+.curl-command {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 1em;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Highlighting de sintaxis JSON */
+.highlight-code .hljs-string {
+    color: #22863a;
+}
+
+.highlight-code .hljs-number {
+    color: #005cc5;
+}
+
+.highlight-code .hljs-literal {
+    color: #d73a49;
+}
+
+/* Mensajes de información */
+.info-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info .title {
+        font-size: 1.8em;
+    }
+
+    .swagger-ui .info {
+        margin: 20px 10px;
+    }
+}
